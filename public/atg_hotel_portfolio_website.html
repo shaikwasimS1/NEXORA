@@ -1,0 +1,183 @@
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); }
+  .nav { background: #1a1208; padding: 12px 32px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { color: #d4a84b; font-size: 15px; font-weight: 500; }
+  .nav-links { display: flex; gap: 20px; }
+  .nav-links a { color: #ccc; font-size: 12px; text-decoration: none; cursor: pointer; }
+  .nav-links a:hover { color: #d4a84b; }
+  .nav-btns { display: flex; gap: 8px; }
+  .nav-btns button { padding: 4px 14px; font-size: 11px; border-radius: 3px; cursor: pointer; border: 1px solid #d4a84b; }
+  .btn-reg { background: transparent; color: #d4a84b; }
+  .btn-login { background: #d4a84b; color: #1a1208; }
+  .hero { background: linear-gradient(rgba(20,12,2,0.62),rgba(20,12,2,0.72)), url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900') center/cover; padding: 80px 32px; min-height: 220px; display: flex; flex-direction: column; justify-content: center; }
+  .hero-sub { color: #d4a84b; font-size: 11px; letter-spacing: 2px; margin-bottom: 10px; }
+  .hero-title { color: #fff; font-size: 26px; font-weight: 500; line-height: 1.3; margin-bottom: 18px; max-width: 400px; }
+  .hero-btn { display: inline-block; border: 1px solid #fff; color: #fff; padding: 8px 20px; font-size: 12px; cursor: pointer; background: transparent; border-radius: 2px; }
+  .section { padding: 40px 32px; }
+  .section-title { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px; }
+  .section-sub { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 24px; }
+  .stars { color: #f59e0b; font-size: 13px; margin-bottom: 4px; }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .why-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 14px; }
+  .why-icon { font-size: 18px; margin-bottom: 6px; }
+  .why-card h4 { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .why-card p { font-size: 11px; color: var(--color-text-secondary); line-height: 1.5; }
+  .stats { display: flex; gap: 16px; margin-bottom: 20px; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 18px; font-weight: 500; color: #c0392b; }
+  .stat-label { font-size: 10px; color: var(--color-text-secondary); }
+  .amenities-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+  .amenity { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 16px 20px; text-align: center; font-size: 11px; color: var(--color-text-secondary); min-width: 80px; }
+  .amenity-icon { font-size: 20px; margin-bottom: 6px; display: block; }
+  .portfolio-section { background: var(--color-background-secondary); padding: 40px 32px; }
+  .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 20px; }
+  .portfolio-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }
+  .portfolio-img { width: 100%; height: 100px; object-fit: cover; background: #e0d6c8; display: flex; align-items: center; justify-content: center; color: #999; font-size: 11px; }
+  .portfolio-body { padding: 12px; }
+  .portfolio-body h4 { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .portfolio-body p { font-size: 11px; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 8px; }
+  .portfolio-tag { display: inline-block; background: var(--color-background-info); color: var(--color-text-info); font-size: 10px; padding: 2px 8px; border-radius: 10px; }
+  .footer { background: #1a1208; color: #ccc; padding: 32px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 24px; }
+  .footer h5 { color: #d4a84b; font-size: 13px; font-weight: 500; margin-bottom: 12px; }
+  .footer p, .footer a { font-size: 11px; color: #aaa; display: block; text-decoration: none; margin-bottom: 6px; line-height: 1.6; }
+  .footer a:hover { color: #d4a84b; }
+  .footer-brand { font-size: 15px; color: #d4a84b; font-weight: 500; margin-bottom: 10px; }
+  .social { display: flex; gap: 8px; margin-top: 10px; }
+  .social span { width: 26px; height: 26px; border: 1px solid #555; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #aaa; cursor: pointer; }
+  .copyright { background: #111; color: #666; text-align: center; font-size: 10px; padding: 10px; }
+  .section-accent { color: #c0392b; }
+  .edit-note { background: var(--color-background-warning); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 12px; color: var(--color-text-warning); margin-bottom: 20px; }
+</style>
+
+<div class="nav">
+  <div class="nav-brand">ATG Hotel</div>
+  <div class="nav-links">
+    <a>Home</a><a>About</a><a>Our Services</a><a>Facility</a><a>Blog</a><a>Portfolio</a><a>Contact</a>
+  </div>
+  <div class="nav-btns">
+    <button class="btn-reg">Register</button>
+    <button class="btn-login">Login</button>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-sub">GET LUXURY AND COMFORT</div>
+  <div class="hero-title">Discover Luxury Like Never Before with ATG HOTELS</div>
+  <button class="hero-btn">Explore Now →</button>
+</div>
+
+<div class="section" style="background: var(--color-background-primary);">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;">
+    <div style="flex:1; min-width:200px;">
+      <div class="section-title">Why Choose ATG HOTELS?</div>
+      <div class="stars">★★★★☆</div>
+      <div style="font-size:11px; color:var(--color-text-secondary);">4.8 star rating hotels</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Comfortable<br>Rooms</div></div>
+      <div class="stat"><div class="stat-num">5M+</div><div class="stat-label">Happy<br>Customers</div></div>
+      <div class="stat"><div class="stat-num">23+</div><div class="stat-label">Certification<br>of Merit</div></div>
+    </div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-icon">📋</div><h4>Easy Cancellation</h4><p>Enjoy the flexibility of hassle-free cancellations.</p></div>
+    <div class="why-card"><div class="why-icon">🏷️</div><h4>Exclusive Offers</h4><p>Get access to special discounts and member-only deals.</p></div>
+    <div class="why-card"><div class="why-icon">🏠</div><h4>Top Amenities</h4><p>Experience world-class facilities including spa and pools.</p></div>
+    <div class="why-card"><div class="why-icon">🎧</div><h4>24/7 Customer Support</h4><p>Our dedicated support team is always here to help.</p></div>
+  </div>
+</div>
+
+<div class="section" style="background: var(--color-background-secondary);">
+  <div class="section-title">Our Top <span class="section-accent">Amenities</span></div>
+  <div class="amenities-grid">
+    <div class="amenity"><span class="amenity-icon">📶</span>Parking</div>
+    <div class="amenity"><span class="amenity-icon">❄️</span>AC</div>
+    <div class="amenity"><span class="amenity-icon">🏊</span>Swimming Pool</div>
+    <div class="amenity"><span class="amenity-icon">💪</span>GYM</div>
+    <div class="amenity"><span class="amenity-icon">🅿️</span>Parking</div>
+    <div class="amenity"><span class="amenity-icon">👕</span>Laundry</div>
+  </div>
+</div>
+
+<div class="portfolio-section">
+  <div class="section-title">Our <span class="section-accent">Portfolio</span></div>
+  <div class="section-sub">A glimpse of our finest work and completed projects</div>
+  <div class="edit-note">✏️ Replace the cards below with your actual portfolio items — update the title, description, and tags to match your projects.</div>
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:#d6c9b8; font-size:30px; color:#a08060;">🏨</div>
+      <div class="portfolio-body">
+        <h4>Grand Suite Renovation</h4>
+        <p>Complete interior overhaul of 20 luxury suites with modern finishes and smart room features.</p>
+        <span class="portfolio-tag">Interior Design</span>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:#c8d8cc; font-size:30px; color:#5a8a6a;">🌿</div>
+      <div class="portfolio-body">
+        <h4>Rooftop Garden Lounge</h4>
+        <p>Designed and built an eco-friendly rooftop dining experience with panoramic views.</p>
+        <span class="portfolio-tag">Architecture</span>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:#ccd0d8; font-size:30px; color:#5a6a8a;">💻</div>
+      <div class="portfolio-body">
+        <h4>Digital Booking System</h4>
+        <p>Developed a seamless online booking platform integrated with real-time room availability.</p>
+        <span class="portfolio-tag">Technology</span>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:#d8ccd0; font-size:30px; color:#8a5a6a;">🍽️</div>
+      <div class="portfolio-body">
+        <h4>Fine Dining Restaurant</h4>
+        <p>Launched an award-winning in-house restaurant featuring regional and international cuisine.</p>
+        <span class="portfolio-tag">F&B</span>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:#d0d8cc; font-size:30px; color:#6a8a5a;">🏋️</div>
+      <div class="portfolio-body">
+        <h4>Premium Wellness Center</h4>
+        <p>State-of-the-art gym and spa facility offering personalized wellness programs.</p>
+        <span class="portfolio-tag">Wellness</span>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-img" style="background:#d8d0c8; font-size:30px; color:#8a7a5a;">🎉</div>
+      <div class="portfolio-body">
+        <h4>Banquet Hall Design</h4>
+        <p>Transformed 3,000 sq ft banquet space with modular layouts for weddings and events.</p>
+        <span class="portfolio-tag">Events</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div>
+    <div class="footer-brand">ATG Hotel</div>
+    <p>ATG Hotels offers a blend of luxury, comfort, and world-class service, ensuring an unforgettable stay.</p>
+    <div class="social">
+      <span>in</span><span>f</span><span>tw</span><span>yt</span>
+    </div>
+  </div>
+  <div>
+    <h5>Quick Links</h5>
+    <a>Home</a><a>About Us</a><a>Rooms</a><a>Blog</a><a>Contact Us</a>
+  </div>
+  <div>
+    <h5>Services</h5>
+    <a>Hotel Rooms</a><a>Amenities</a><a>Offers</a>
+  </div>
+  <div>
+    <h5>Contact Information</h5>
+    <a>Address: 123 Street, City, State, Zip</a>
+    <a>Phone: +91 9923 35487</a>
+    <a>Email: contact@atghotel.org</a>
+  </div>
+</div>
+<div class="copyright">Copyright © 2025 ATG Hotels. All rights reserved.</div>
