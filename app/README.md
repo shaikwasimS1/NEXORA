@@ -33,4 +33,4 @@ A modern, animated portfolio website built with Next.js and Tailwind CSS, featur
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/your-project-name.git
+git clone https://github.com/shaikwasimS1/NEXORA
