@@ -21,7 +21,7 @@ A modern, animated portfolio website built with Next.js and Tailwind CSS, featur
 
 - **Next.js 13+ (App Router)**
 - **React.js**
-- **TypeScript (optional / partial use)**
+- **Javascript/TypeScript**
 - **Tailwind CSS**
 - **Framer Motion (animations)**
 - **Lucide Icons**
