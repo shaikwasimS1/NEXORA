@@ -78,7 +78,7 @@ export default function HeroContent() {
           {/* Buttons */}
           <div className="flex flex-wrap items-center gap-4">
 
-            <Link href="/contact">
+            <Link href="/component/Contact">
               <Button
                 text="Start Project"
                 className="group flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-500 text-white shadow-xl shadow-purple-500/20 hover:shadow-cyan-500/30 hover:scale-105 px-8 py-3.5 rounded-xl transition-all duration-300"
