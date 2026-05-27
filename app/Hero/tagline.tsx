@@ -175,15 +175,15 @@ export default function Tagline() {
               color: '#fff',
               marginBottom: '1.4rem',
             }}>
-              We Craft<br />
+              Enterprise-Grade<br />
               <span style={{
                 background: 'linear-gradient(115deg, #c084fc, #67e8f9, #818cf8)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
               }}>
-                Extraordinary
+                Architecture
               </span>
-              <br />Digital Experiences
+              <br />& Scalability
             </h1>
 
             <p style={{
@@ -193,12 +193,12 @@ export default function Tagline() {
               marginBottom: '2.2rem',
               fontSize: '1.05rem'
             }}>
-              Premium UI/UX Design • AI-First Development • Emotional Branding • Future-Forward Strategy
+              Specialized in enterprise applications, authentication systems, task management platforms, and performance-focused backend architecture.
             </p>
 
             {/* Hoverable Tags */}
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: '2.8rem' }}>
-              {['Web Design', 'Mobile Apps', 'AI Products', 'Brand Identity', '3D Experiences'].map((t) => (
+              {['ASP.NET Core', 'REST APIs', 'SQL Server', 'React / Next.js', 'Clean Architecture'].map((t) => (
                 <span
                   key={t}
                   className="tag"
@@ -221,7 +221,7 @@ export default function Tagline() {
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link href="/component/Contact">
                 <Button
-                  text="Start Your Project"
+                  text="Contact Me"
                   className="btn-primary"
                   style={{
                     border: 0,
@@ -239,7 +239,7 @@ export default function Tagline() {
               <Link href="/component/Portfolio">
 
                 <Button
-                  text=" Explore Our Work →"
+                  text=" View Projects →"
                   className="btn-secondary"
                   style={{
                     background: 'transparent',

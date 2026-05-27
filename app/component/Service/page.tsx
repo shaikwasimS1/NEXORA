@@ -4,49 +4,50 @@ import ServiceCards from "./SercicesCard";
 import ServicesHeader from "./ServicesHeader";
 import StatsSection from "./StatsSections";
 import Technologies from "./Technologies";
+import ApiArchitecture from "./ApiArchitecture";
 
 export default function Services() {
 
  const services = [
   {
-    title: "UI/UX Design",
-    emoji: "🎨",
+    title: "Backend Development",
+    emoji: "⚙️",
     color: "from-purple-500 to-pink-500",
-    desc: "Hyper-personalized, multimodal interfaces with AI-driven intent detection, tactile maximalism, kinetic typography, glassmorphism 2.0, and predictive experiences that feel alive.",
-    focus: "2026 Focus: Agentic UX • Multimodal • Tactile Surfaces",
+    desc: "Scalable architecture using ASP.NET Core, RESTful APIs, JWT Authentication, Entity Framework, and optimized SQL Server database design.",
+    focus: "Tech: C# • ASP.NET Core • SQL Server • Entity Framework",
   },
   {
-    title: "Web Development",
+    title: "Frontend Development",
     emoji: "💻",
     color: "from-cyan-400 to-blue-500",
-    desc: "AI-first development with agentic workflows, server-first architectures, WebGPU-powered 3D experiences, and lightning-fast performance.",
-    focus: "2026 Focus: AI-Driven Code • WebGL 3D • Performance-First",
+    desc: "Responsive and dynamic user interfaces built with React, Next.js, and Tailwind CSS, focused on performance and seamless user experiences.",
+    focus: "Tech: React • Next.js • Tailwind CSS • Blazor",
   },
   {
-    title: "Branding",
-    emoji: "✨",
+    title: "Full Stack Systems",
+    emoji: "🚀",
     color: "from-amber-400 to-rose-500",
-    desc: "Strategic identity systems with motion-first logos, warm organic aesthetics, and emotionally resonant storytelling.",
-    focus: "2026 Focus: Felt Experiences • Kinetic Motion • Authentic Storytelling",
+    desc: "End-to-end enterprise applications including Employee Management, CRM Systems, and Admin Dashboards with Role-Based Access Control.",
+    focus: "Expertise: System Design • Dashboards • RBAC • CRM",
   },
   {
-    title: "Digital Marketing",
-    emoji: "📈",
+    title: "API Architecture",
+    emoji: "🔗",
     color: "from-emerald-500 to-teal-500",
-    desc: "Agentic AI campaigns, Answer Engine Optimization, hyper-personalized content, and community-driven growth.",
-    focus: "2026 Focus: AI Agents • AEO • Privacy-First • Creator-Led",
+    desc: "Secure, documented, and performance-optimized APIs with clean architecture principles, seamless frontend integration, and robust data handling.",
+    focus: "Expertise: REST • Clean Architecture • Swagger • Security",
   },
 ];
 
  const technologies = [
-  { name: "Next.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-  { name: "Node.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "TypeScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-  { name: "Tailwind CSS", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-  { name: ".NET", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" },
-  { name: "Figma", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name: "MongoDB", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "C#", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+  { name: ".NET Core", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" },
+  { name: "SQL Server", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg" },
   { name: "React", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Next.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+  { name: "Tailwind CSS", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+  { name: "TypeScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "Node.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
 ];
 
   const handleMouseMove = (e: any, card: any) => {
@@ -74,6 +75,7 @@ export default function Services() {
         <ServicesHeader />
         <StatsSection />
         <ServiceCards services={services} handleMouseMove={handleMouseMove} handleMouseLeave={handleMouseLeave} />
+        <ApiArchitecture />
         <Technologies technologies={technologies} />
       </div>
     </section>

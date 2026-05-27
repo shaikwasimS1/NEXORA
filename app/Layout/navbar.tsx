@@ -47,12 +47,7 @@ export default function Navbar() {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-cyan-400 group-hover:w-full transition-all duration-300" />
           </Link>
 
-          {/* Login Button (UNCHANGED) */}
-          <Button
-            text="Login"
-            href="/component/Login"
-            className="ml-4 bg-gradient-to-r from-purple-600 to-cyan-500 text-white shadow-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:from-purple-700 hover:to-cyan-600"
-          />
+
         </div>
 
         {/* Mobile Button */}
@@ -78,12 +73,7 @@ export default function Navbar() {
             <Link href="/component/Portfolio" onClick={() => setIsOpen(false)}>Portfolio</Link>
             <Link href="/component/Contact" onClick={() => setIsOpen(false)}>Contact</Link>
 
-            {/* FIXED: removed nested Link */}
-            <Button
-              text="Login"
-              href="/component/Login"
-              className="bg-gradient-to-r from-purple-600 to-cyan-500 text-white shadow-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:from-purple-700 hover:to-cyan-600"
-            />
+
 
           </div>
         </motion.div>

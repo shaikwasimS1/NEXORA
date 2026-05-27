@@ -22,7 +22,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-black px-4 sm:px-6">
+      <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-black px-4 sm:px-6">
 
         <HeroCanvas mouse={mouse} />
 

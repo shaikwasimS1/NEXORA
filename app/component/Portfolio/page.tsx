@@ -6,17 +6,18 @@ import FeaturedProjects from './FeaturedProjects';
 import CreatorNetwork from './CreatorNetwork';
 import TrendingNow from './TrendingNow';
 import FilterPills from './Filterpill';
+import EmployeeManagementCaseStudy from './EmployeeManagementCaseStudy';
 
 const projects = [
   {
     id: 1,
-    title: "MOVIE EXPLORER",
-    desc: "A cinematic React app for discovering, searching and exploring movies.",
-    category: "React & API Integration",
-    url: "https://movie-explorer-react-app-2pl6.vercel.app/",
-    preview: "https://api.microlink.io/?url=https://movie-explorer-react-app-2pl6.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
-    tags: ["REACT.JS", "API", "TAILWIND"],
-    accent: "#22d3ee",
+    title: "EMPLOYEE MANAGEMENT",
+    desc: "Full-stack enterprise application with role-based access, task tracking, and secure API architecture.",
+    category: "Full Stack & API",
+    url: "#",
+    preview: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    tags: ["ASP.NET CORE", "REACT", "SQL"],
+    accent: "#c084fc",
   },
   {
     id: 2,
@@ -97,6 +98,8 @@ export default function Portfolio() {
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
       />
+
+      <EmployeeManagementCaseStudy />
 
       <FeaturedProjects projects={projects} />
 

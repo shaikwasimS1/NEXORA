@@ -48,7 +48,12 @@ export default function Contact() {
         'template_394f4x8',
         {
           from_name: formData.name,
+          name: formData.name,
+          user_name: formData.name,
           from_email: formData.email,
+          email: formData.email,
+          user_email: formData.email,
+          reply_to: formData.email,
           message: formData.message,
         },
         'VKYxYZztD_0SuJOij'
